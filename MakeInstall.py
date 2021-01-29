@@ -258,7 +258,7 @@ class WinUSB:
                 "select disk {}".format(disk.get("index",-1)),
                 "clean",
                 "convert mbr",
-                "create partition primary size=200",
+                "create partition primary size=1000",
                 "format quick fs=fat32 label='BOOT'",
                 "active",
                 "create partition primary",
@@ -273,7 +273,7 @@ class WinUSB:
                 "select disk {}".format(disk.get("index",-1)),
                 "clean",
                 "convert gpt",
-                "create partition primary size=200",
+                "create partition primary size=1000",
                 "format quick fs=fat32 label='BOOT'",
                 "create partition primary id={}".format(self.hfs_id)
             ])
